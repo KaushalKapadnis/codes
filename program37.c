@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//	Name : DisplayDigits
+//	Input : Integer
+//	Output : void
+//	Description : Displays Digits of Input Integer
+//	Author : Kaushal Sachin Kapadnis
+//  Date : 	27/4/2022
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void DisplayDigits(int iNo)
+{
+	int iDigit = 0;
+	
+	while(iNo != 0)
+	{		
+		iDigit = iNo % 10;
+		printf("%d\n",iDigit);
+		iNo = iNo / 10; 
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//	Entry point Function
+///////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iValue = 0;
+	
+	printf("Enter Number\n");
+	scanf("%d",&iValue);
+	
+	DisplayDigits(iValue);
+	
+	return 0;
+}
